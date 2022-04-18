@@ -1,0 +1,19 @@
+2022-04-18 15:18:03.7595 ERROR Invalid model state for the EmployeeForUpdateDto object
+2022-04-18 15:18:11.7773 ERROR Invalid model state for the EmployeeForUpdateDto object
+2022-04-18 16:03:44.2804 ERROR Invalid model state for the object. Controller:Company, action: CreateCompany
+2022-04-18 16:04:39.5853 ERROR Something went wrong: System.NotImplementedException: The method or operation is not implemented.
+   at WebApi.ActionFilters.ValidationFilterAttribute.OnActionExecuted(ActionExecutedContext context) in C:\Users\vladimir.camagic\Desktop\WebApi\WebApi\ActionFilters\ValidationFilterAttribute.cs:line 18
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2022-04-18 16:06:35.8091 ERROR Invalid model state for the object. Controller:Employees, action: CreateEmployeeForCompany
+2022-04-18 16:06:46.5974 ERROR Object sent from client is null. Controller: Employees,action: CreateEmployeeForCompany
+2022-04-18 16:07:26.3739 ERROR Invalid model state for the object. Controller:Employees, action: CreateEmployeeForCompany
