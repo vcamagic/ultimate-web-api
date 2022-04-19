@@ -118,7 +118,7 @@ public class CompanyController : ControllerBase
     [ServiceFilter(typeof(ValidationFilterAttribute))]
     public async Task<IActionResult> UpdateCompany(Guid id, [FromBody] CompanyForUpdateDto company)
     {
-       var companyEntity = HttpContext.Items["company"] as Company;
+        var companyEntity = HttpContext.Items["company"] as Company;
 
         _mapper.Map(company, companyEntity);
         await _repository.SaveAsync();
