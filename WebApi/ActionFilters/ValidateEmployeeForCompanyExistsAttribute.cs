@@ -1,7 +1,6 @@
 using Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-
 namespace WebApi.ActionFilters;
 public class ValidateEmployeeForCompanyExistsAttribute : IAsyncActionFilter
 {
@@ -16,8 +15,7 @@ public class ValidateEmployeeForCompanyExistsAttribute : IAsyncActionFilter
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
         var method = context.HttpContext.Request.Method;
-        var trackChanges = (method.Equals("PUT") || method.Equals("PATCH")) ? true :
-       false;
+        var trackChanges = (method.Equals("PUT") || method.Equals("PATCH")) ? true : false;
         var companyId = (Guid)context.ActionArguments["companyId"];
         var company = await _repository.Company.GetCompanyAsync(companyId, false);
         if (company == null)
@@ -28,8 +26,7 @@ public class ValidateEmployeeForCompanyExistsAttribute : IAsyncActionFilter
             return;
         }
         var id = (Guid)context.ActionArguments["id"];
-        var employee = await _repository.Employee.GetEmployeeAsync(companyId, id,
-       trackChanges);
+        var employee = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges);
         if (employee == null)
         {
             _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");

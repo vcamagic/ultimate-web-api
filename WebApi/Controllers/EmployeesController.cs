@@ -2,8 +2,10 @@ using AutoMapper;
 using Contracts;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Entities.RequestFeatures;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WebApi.ActionFilters;
 
 namespace WebApi.Controllers;
@@ -24,15 +26,21 @@ public class EmployeesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetEmployeesForCompany(Guid companyId)
+    public async Task<IActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery] EmployeeParameters employeeParamaters)
     {
+        if (!employeeParamaters.ValidAgeRange)
+            return BadRequest("Max age can't be less than min age.");
+
         var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
         if (company == null)
         {
             _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
             return NotFound();
         }
-        var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, trackChanges: false);
+        var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, employeeParamaters, trackChanges: false);
+
+        Response.Headers.Add("X-Pagination",
+                             JsonConvert.SerializeObject(employeesFromDb.MetaData));
 
         return Ok(_mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb));
     }

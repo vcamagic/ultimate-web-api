@@ -104,6 +104,7 @@ public class CompanyController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [ServiceFilter(typeof(ValidateCompanyExistsAttribute))]
     public async Task<IActionResult> DeleteCompany(Guid id)
     {
         var company = HttpContext.Items["company"] as Company;
