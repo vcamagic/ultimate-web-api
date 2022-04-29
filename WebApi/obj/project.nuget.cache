@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BUea7MVHGKQ/nqKGfU3wcK6oGQAPwUKtkPxs85+f8T1dP4KnABD+zBC0mDBHU2Aj2fVAJ1BqxzvGLfSCo+lcOQ==",
+  "dgSpecHash": "ieMUSj6FsYYLcAmcn2gWzn7JJAYMkl1sPo8DkP9idy30DWn5WkAk8juUK8uoSD+9JAslxbw1E+qrHNUJh39NmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\vladimir.camagic\\Desktop\\WebApi\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,7 @@
     "C:\\Users\\vladimir.camagic\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\vladimir.camagic\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\vladimir.camagic\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "C:\\Users\\vladimir.camagic\\.nuget\\packages\\system.linq.dynamic.core\\1.2.18\\system.linq.dynamic.core.1.2.18.nupkg.sha512",
     "C:\\Users\\vladimir.camagic\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\vladimir.camagic\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\vladimir.camagic\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",

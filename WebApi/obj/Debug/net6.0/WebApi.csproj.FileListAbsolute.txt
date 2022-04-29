@@ -76,3 +76,4 @@ C:\Users\vladimir.camagic\Desktop\WebApi\WebApi\bin\Debug\net6.0\Microsoft.AspNe
 C:\Users\vladimir.camagic\Desktop\WebApi\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\vladimir.camagic\Desktop\WebApi\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\vladimir.camagic\Desktop\WebApi\WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\vladimir.camagic\Desktop\WebApi\WebApi\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
